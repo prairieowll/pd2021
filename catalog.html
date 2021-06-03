@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курсы - NetSpace</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/contentpage.css">
+    <link rel="stylesheet" type="text/css" href="css/contentPage.css">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
 
@@ -42,14 +42,16 @@
                         <div class="title__header">
                             <h1>Каталог товаров</h1>
                         </div>
-                        <div class="title__text">
-                            <button id="0" class="category-btn">Все товары</button>
-                            <button id="1" class="category-btn">Не все товары</button>
+                        <div class="title__btn">
+                            <div id="0" class="category-btn active-btn">Все товары</div>
+                            <div id="1" class="category-btn">Манга</div>
+                            <div id="2" class="category-btn">Комиксы</div>
+                            <div id="3" class="category-btn">Атрибутика</div>
                         </div>
                     </div>
                     <div class="intro__icon">
                         <div class="big-icon">
-                            <img src="https://i.pinimg.com/originals/a2/aa/45/a2aa45502770db5ee345064f63fdb7af.png">
+                            <img src="https://i.redd.it/8gltrfy8zey31.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -58,24 +60,6 @@
         <section class="content-list">
             <div class="container">
                 <div class="content-list__row">
-                    <div class="content-list__column">
-                        <div class="content-list__item item">
-                            <div class="item__img">
-                                <img src="https://geek-trip.ru/wp-content/uploads/2021/05/screenshot_61-1.jpg" alt="">
-                            </div>
-                            <div class="item__title">
-                                <p>Название товара</p>
-                            </div>
-                            <div class="item__price">
-                                <p>900.00&#8381</p>
-                            </div>
-                            <div class="item__buy-btn">
-                                <div class="item__buy-btn">
-                                    <a href="#">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -121,7 +105,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/catalogHandler.js"></script>
+<script type="text/javascript" src="js/getCatalog.js"></script>
 </body>
 
 </html>
