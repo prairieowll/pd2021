@@ -6,9 +6,9 @@ $('.mailing__form').on("submit", function (e) {
         type: 'POST',
         url: 'php/mailing.php',
         data: {email: input.val()},
-        success: function (data) {
+        success: function (response) {
             input.val('');
-            alert(data);
+            alert(response);
         },
     });
 });
