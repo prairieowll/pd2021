@@ -22,9 +22,9 @@ $result = mysqli_query($db, $query) or die("Ошибка: " . mysqli_error($db))
 while ($item = mysqli_fetch_assoc($result)) {
     echo '<div class="content-list__column">';
     echo '<div class="content-list__item item">';
-    echo '<div class="item__img"><img src="'.$item['img'].'" alt=""></div>';
-    echo '<div class="item__title"><p>'.$item['name'].'</p></div>';
-    echo '<div class="item__price"><p>'.$item['price'].'&#8381</p></div>';
+    echo '<div class="item__img"><a href="../item.php?id='.$item['id'].'"><img src="'.$item['img'].'" alt=""></a></div>';
+    echo '<div class="item__title"><a href="../item.php?id='.$item['id'].'">'.$item['name'].'</a></div>';
+    echo '<div class="item__price"><a>'.$item['price'].'&#8381</a></div>';
     echo '<div class="item__buy-btn"><a href="#">В корзину</a></div>';
     echo '</div></div>';
 }

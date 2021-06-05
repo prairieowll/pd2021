@@ -565,13 +565,13 @@ textarea {
    }
 
    .contacts,
-   .info,
+   .info__footer,
    .mailing {
       width: 80%;
       text-align: center;
    }
 
-   .info,
+   .info__footer,
    .mailing {
       margin-bottom: 25px;
    }
