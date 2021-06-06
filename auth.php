@@ -1,8 +1,5 @@
 <?php
-/**
- * @var array $row
- */
-require_once 'php/toCart.php';
+require_once 'php/auth.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -13,6 +10,7 @@ require_once 'php/toCart.php';
     <title>Курсы - NetSpace</title>
     <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
     <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
+    <link rel="stylesheet" type="text/css" href="css/auth.css?ver=1310">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
 
@@ -31,7 +29,7 @@ require_once 'php/toCart.php';
                     <a class="nav__links" href="index.html">Главная</a>
                     <a class="nav__links" href="catalog.html">Каталог</a>
                     <a class="nav__links" href="#">Адрес и контакты</a>
-                    <a class="nav__links" href=""><img src="img/cart.png" alt=""></a>
+                    <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
                      <span>support@ShopName.ru</span>
@@ -44,38 +42,25 @@ require_once 'php/toCart.php';
         <section class="intro">
             <div class="container">
                 <div class="intro__title">
-                    <h1>Корзина товаров</h1>
+                    <h1>Авторизация</h1>
                 </div>
             </div>
         </section>
         <section class="content-list">
             <div class="container">
-                <div class="cart">
-                    <div class="cart__row">
-                        <div class="cart__item">Имя товара</div>
-                        <div class="cart__amount">Кол-во</div>
-                        <div class="cart__price">Цена</div>
-                    </div>
-                    <?php
-                    if (isset($_SESSION['cart']) && $_SESSION['cart'] != []) {
-                        $total = 0;
-                        foreach ($_SESSION['cart'] as $item) {
-                            echo '<div class="cart__row">';
-                            echo '<div class="cart__item"><a href="item.php?id='.$item['id'].'">' . $item['name'] . '</a></div>';
-                            echo '<div class="cart__amount">' . $item['quantity'] . '</div>';
-                            echo '<div class="cart__price">' . number_format($item['price'] * $item['quantity']). '&#8381</div>';
-                            echo '</div>';
-                            $total += $item['price'] * $item['quantity'];
-                        }
-                        echo '<div class="cart__row">';
-                        echo '<div class="cart__total">Итого: '.number_format($total).'&#8381</div>';
-                        echo '</div>';
-                        echo '<div class="cart__row">';
-                        echo '<div class="cart__btn" id="0">Очистить корзину</div>';
-                        echo '<div class="cart__btn">Купить</div>';
-                        echo '</div>';
-                    } else echo '<div class="cart__row">Ваша корзина пуста</div>'
-                    ?>
+                <div class="auth">
+                    <form class="auth__form auth-form" method="post">
+                        <div class="auth-form__row">
+                            <input type="text" maxlength="50" name="login" placeholder="Логин">
+                        </div>
+                        <div class="auth-form__row">
+                            <input type="password" maxlength="50" name="password" placeholder="Пароль">
+                        </div>
+                        <div class="auth-form__row">
+                            <div class="auth__btn">Войти</div>
+                        </div>
+                    </form>
+                    <div class="note">Логин - admin, пароль - admin</div>
                 </div>
             </div>
         </section>
@@ -95,8 +80,8 @@ require_once 'php/toCart.php';
                         <ul>
                             <li>Информация</li>
                             <li><a class="nav__links" href="index.html#about">О нас</a></li>
-                            <li><a class="nav__links" href="">Доставка и оплата</a></li>
-                            <li><a class="nav__links" href="auth.php">Администратору</a></li>
+                            <li><a class="nav__links" href="">FAQ</a></li>
+                            <li><a class="nav__links" href="#">Доставка и оплата</a></li>
                         </ul>
                     </div>
                     <div class="mailing">
@@ -123,7 +108,7 @@ require_once 'php/toCart.php';
 <script type="text/javascript" src="js/scroll.js"></script>
 <script type="text/javascript" src="js/getCatalog.js?ver=10"></script>
 <script type="text/javascript" src="js/setMailing.js"></script>
-<script type="text/javascript" src="js/toCart.js?ver=15"></script>
+<script type="text/javascript" src="js/auth.js?ver=1512"></script>
 </body>
 
 </html>

@@ -14,9 +14,9 @@ or die("Ошибка: " . mysqli_error($db));
 $category = $_GET['category'];
 
 if ($category == 0)
-    $query = "SELECT * FROM goods";
+    $query = "SELECT * FROM goods ORDER BY name";
 else
-    $query = "SELECT * FROM goods WHERE category_id = $category";
+    $query = "SELECT * FROM goods WHERE category_id = $category ORDER BY name";
 
 $result = mysqli_query($db, $query) or die("Ошибка: " . mysqli_error($db));
 while ($item = mysqli_fetch_assoc($result)) {

@@ -1,0 +1,70 @@
+.admin {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.admin#exit {
+    justify-content: flex-end;
+}
+
+.admin__row {
+    margin-top: 30px;
+}
+
+.form__row {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.form__row input, .form__row textarea, .form__row select{
+    width: 100%;
+    margin: 0 10px 10px;
+}
+
+.form__row input, .form__row select {
+    height: 20px;
+}
+
+.admin__title {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 5px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.option__btn {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #e1e1e1;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.option__btn:hover {
+    cursor: pointer;
+    background-color: #d1d1d1;
+}
+
+.exit__btn {
+    text-align: center;
+    width: 150px;
+    box-sizing: border-box;
+    background-color: #333;
+    margin: 20px 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 500;
+}
+.exit__btn:hover {
+    cursor: pointer;
+    background-color: #111111;
+}

@@ -98,8 +98,8 @@ mysqli_close($db);
                         <ul>
                             <li>Информация</li>
                             <li><a class="nav__links" href="index.html#about">О нас</a></li>
-                            <li><a class="nav__links" href="">FAQ</a></li>
-                            <li><a class="nav__links" href="#">Доставка и оплата</a></li>
+                            <li><a class="nav__links" href="">Доставка и оплата</a></li>
+                            <li><a class="nav__links" href="auth.php">Администратору</a></li>
                         </ul>
                     </div>
                     <div class="mailing">
