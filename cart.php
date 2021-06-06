@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var array $row
+ */
+require_once 'php/toCart.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -6,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курсы - NetSpace</title>
     <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
-    <link rel="stylesheet" type="text/css" href="css/catalog.css?ver=1010">
+    <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
 
@@ -23,9 +29,9 @@
                 </div>
                 <nav class="nav">
                     <a class="nav__links" href="index.html">Главная</a>
-                    <a class="nav__links" href="#intro">Каталог</a>
+                    <a class="nav__links" href="catalog.html">Каталог</a>
                     <a class="nav__links" href="#">Адрес и контакты</a>
-                    <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
+                    <a class="nav__links" href=""><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
                      <span>support@ShopName.ru</span>
@@ -35,31 +41,41 @@
         </div>
     </header>
     <div class="content">
-        <section id="intro" class="intro">
+        <section class="intro">
             <div class="container">
-                <div class="intro__inner">
-                    <div class="intro__title title">
-                        <div class="title__header">
-                            <h1>Каталог товаров</h1>
-                        </div>
-                        <div class="title__btn">
-                            <div id="0" class="category-btn active-btn">Все товары</div>
-                            <div id="1" class="category-btn">Манга</div>
-                            <div id="2" class="category-btn">Комиксы</div>
-                            <div id="3" class="category-btn">Атрибутика</div>
-                        </div>
-                    </div>
-                    <div class="intro__icon">
-                        <div class="big-icon">
-                            <img src="https://i.redd.it/8gltrfy8zey31.png" alt="">
-                        </div>
-                    </div>
+                <div class="intro__title">
+                    <h1>Корзина товаров</h1>
                 </div>
             </div>
         </section>
         <section class="content-list">
             <div class="container">
-                <div class="content-list__row">
+                <div class="cart">
+                    <div class="cart__row">
+                        <div class="cart__item">Имя товара</div>
+                        <div class="cart__amount">Кол-во</div>
+                        <div class="cart__price">Цена</div>
+                    </div>
+                    <?php
+                    if (isset($_SESSION['cart']) && $_SESSION['cart'] != []) {
+                        $total = 0;
+                        foreach ($_SESSION['cart'] as $item) {
+                            echo '<div class="cart__row">';
+                            echo '<div class="cart__item"><a href="item.php?id='.$item['id'].'">' . $item['name'] . '</a></div>';
+                            echo '<div class="cart__amount">' . $item['quantity'] . '</div>';
+                            echo '<div class="cart__price">' . number_format($item['price'] * $item['quantity']). '&#8381</div>';
+                            echo '</div>';
+                            $total += $item['price'] * $item['quantity'];
+                        }
+                        echo '<div class="cart__row">';
+                        echo '<div class="cart__total">Итого: '.number_format($total).'&#8381</div>';
+                        echo '</div>';
+                        echo '<div class="cart__row">';
+                        echo '<div class="cart__btn" id="0">Очистить корзину</div>';
+                        echo '<div class="cart__btn">Купить</div>';
+                        echo '</div>';
+                    } else echo '<div class="cart__row">Ваша корзина пуста</div>'
+                    ?>
                 </div>
             </div>
         </section>
@@ -105,9 +121,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/getCatalog.js"></script>
+<script type="text/javascript" src="js/getCatalog.js?ver=10"></script>
 <script type="text/javascript" src="js/setMailing.js"></script>
-<script type="text/javascript" src="js/toCart.js?ver=1"></script>
+<script type="text/javascript" src="js/toCart.js?ver=15"></script>
 </body>
 
 </html>

@@ -1,3 +1,27 @@
+<?php
+/**
+ * @var string $host
+ * @var string $user
+ * @var string $password
+ * @var string $database
+ */
+require_once 'php/connection.php';
+
+$db = mysqli_connect($host, $user, $password, $database)
+or die("Ошибка: " . mysqli_error($db));
+
+$id = $_GET['id'];
+
+$query = "SELECT * FROM goods WHERE id = $id";
+$item = mysqli_fetch_assoc(mysqli_query($db, $query));
+
+$query = "SELECT * FROM producers WHERE id =" . $item['producer_id'];
+$result = mysqli_fetch_assoc(mysqli_query($db, $query));
+$producer = $result['producer'];
+
+mysqli_close($db);
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -5,18 +29,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курсы - NetSpace</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/item.css?ver=100">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
+    <link rel="stylesheet" type="text/css" href="css/item.css?ver=101">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
-
-<?php
-/**
- * @var array $item;
- * @var string $producer;
- */
-require_once 'php/item.php';
-?>
 
 <body>
 <div class="wrapper">
@@ -33,7 +49,7 @@ require_once 'php/item.php';
                     <a class="nav__links" href="index.html">Главная</a>
                     <a class="nav__links" href="catalog.html">Каталог</a>
                     <a class="nav__links" href="#">Адрес и контакты</a>
-                    <a class="nav__links" href="">FAQ</a>
+                    <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
                      <span>support@ShopName.ru</span>
@@ -51,14 +67,14 @@ require_once 'php/item.php';
                     </div>
                     <div class="item__info info">
                         <div class="info__name"><?php echo $item['name']?></div>
-                        <div class="info__price"><?php echo $item['price']?>&#8381</div>
+                        <div class="info__price"><?php echo number_format($item['price'])?>&#8381</div>
                         <div class="info__char">Издатель: <span><?php echo $producer?></span></div>
                         <div class="info__description"><?php echo $item['description']?></div>
                         <div class="info__amount">
                             <?php
                             if ($item['amount'] > 0) {
                                 echo '<span class="in">В наличии</span></div>';
-                                echo '<div class="info__buy-btn"><a href="#">В корзину</a></div>';
+                                echo '<div class="info__buy-btn info__cart-btn" id="'.$item['id'].'"><span>В корзину</span></div>';
                             }
                             else echo '<span class="out">Нет в наличии</span></div>';
                             ?>
@@ -111,6 +127,7 @@ require_once 'php/item.php';
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
 <script type="text/javascript" src="js/setMailing.js"></script>
+<script type="text/javascript" src="js/toCart.js?ver=1400"></script>
 </body>
 
 </html>

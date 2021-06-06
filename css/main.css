@@ -111,6 +111,13 @@ h6 {
    transition: all 200ms;
 }
 
+.nav__links img {
+   width: 32px;
+   display: inline-block;
+   position: relative;
+   top: 5px;
+}
+
 .nav__links:hover {
    color: #bbb;
 }
