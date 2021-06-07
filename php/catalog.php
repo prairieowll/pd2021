@@ -25,7 +25,9 @@ while ($item = mysqli_fetch_assoc($result)) {
     echo '<div class="item__img"><a href="../item.php?id='.$item['id'].'"><img src="'.$item['img'].'" alt=""></a></div>';
     echo '<div class="item__title"><a href="../item.php?id='.$item['id'].'">'.$item['name'].'</a></div>';
     echo '<div class="item__price">'.number_format($item['price']).'&#8381</div>';
-    echo '<div class="item__buy-btn"><a href="../item.php?id='.$item['id'].'">Купить</a></div>';
+    if ($item['amount'] > 0)
+        echo '<div class="item__buy-btn"><a href="../item.php?id='.$item['id'].'">Купить</a></div>';
+    else echo '<div class="item__amount-out">Нет в наличии</div>';
     echo '</div></div>';
 }
 

@@ -165,6 +165,10 @@
    line-height: 24px;
 }
 
+.item__amount-out {
+   color: #2c8d2a;
+}
+
 .btn {
    background-color: #398330;
    border: none;
