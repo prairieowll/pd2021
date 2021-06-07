@@ -50,3 +50,7 @@
 .note {
     font-size: 0.8em;
 }
+
+input::placeholder {
+    padding: 0 0 0 5px;
+}

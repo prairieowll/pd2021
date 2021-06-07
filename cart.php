@@ -30,8 +30,8 @@ require_once 'php/toCart.php';
                 <nav class="nav">
                     <a class="nav__links" href="index.html">Главная</a>
                     <a class="nav__links" href="catalog.html">Каталог</a>
-                    <a class="nav__links" href="#">Адрес и контакты</a>
-                    <a class="nav__links" href=""><img src="img/cart.png" alt=""></a>
+                    <a class="nav__links" href="address.html">Адрес и контакты</a>
+                    <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
                      <span>support@ShopName.ru</span>
@@ -94,9 +94,9 @@ require_once 'php/toCart.php';
                     <div class="info">
                         <ul>
                             <li>Информация</li>
-                            <li><a class="nav__links" href="index.html#about">О нас</a></li>
-                            <li><a class="nav__links" href="">Доставка и оплата</a></li>
-                            <li><a class="nav__links" href="auth.php">Администратору</a></li>
+                            <li><a class="nav__links" href="index.html">О нас</a></li>
+                            <li><a class="nav__links" href="delivery.html">Доставка и оплата</a></li>
+                            <li><a class="nav__links" href="admin.php">Администратору</a></li>
                         </ul>
                     </div>
                     <div class="mailing">

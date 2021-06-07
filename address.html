@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курсы - NetSpace</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
-    <link rel="stylesheet" type="text/css" href="css/catalog.css?ver=1010">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=120">
+    <link rel="stylesheet" type="text/css" href="css/catalog.css?ver=120">
+    <link rel="stylesheet" type="text/css" href="css/address.css?ver=1213">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
 
@@ -40,26 +41,35 @@
                 <div class="intro__inner">
                     <div class="intro__title title">
                         <div class="title__header">
-                            <h1>Каталог товаров</h1>
+                            <h1>Адрес и контакты</h1>
                         </div>
-                        <div class="title__btn">
-                            <div id="0" class="category-btn active-btn">Все товары</div>
-                            <div id="1" class="category-btn">Манга</div>
-                            <div id="2" class="category-btn">Комиксы</div>
-                            <div id="3" class="category-btn">Атрибутика</div>
-                        </div>
-                    </div>
-                    <div class="intro__icon">
-                        <div class="big-icon">
-                            <img src="https://i.redd.it/8gltrfy8zey31.png" alt="">
-                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <section class="content-list">
             <div class="container">
-                <div class="content-list__row">
+                <div class="">
+                    <div class="title__text">
+                        <div id="content" tabindex="-1">
+                            <article id="post-8" class="address__row">
+                                <div class="map-block">
+                                    <script class="map" type="text/javascript" charset="utf-8" async
+                                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ed5386e5fa3fbc70d40820bcd4e870ebc1b3c95584e9ec126bd45d68a3ce669&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+                                </div>
+                                <div class="address">
+                                    <div class="font">
+                                        Наш адрес: г. Москва, ул. Автозаводская, 18.
+                                        <p>Магазин открыт Пн-Пт с 9:00 до 19:00!</p>
+                                        <p>Телефон: +7 (952) 217-64-75 </p>
+                                        <p>Наш e-mail:</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -78,18 +88,19 @@
                     <div class="info">
                         <ul>
                             <li>Информация</li>
-                            <li><a class="nav__links" href="index.html">О нас</a></li>
+                            <li><a class="nav__links" href="index.html#about">О нас</a></li>
                             <li><a class="nav__links" href="delivery.html">Доставка и оплата</a></li>
                             <li><a class="nav__links" href="admin.php">Администратору</a></li>
                         </ul>
                     </div>
                     <div class="mailing">
-                        <form class="mailing__form" method="post">
+                        <form action="" class="mailing__form">
                             <div class="mailing__label">Подпишитесь на рассылку</div>
                             <input type="email" name="email" class="mailing__input" placeholder="Ваш email"
-                                   autocomplete="off" maxlength="70" required>
-                            <div class="btn">
-                                <button type="submit" class="mailing__btn">Подписаться</button>
+                                   autocomplete="off" maxlength="254" required>
+                            <div class="mailing__btn">
+                                <button type="submit" class="mailing__btn btn" onClick="return false;">Подписаться
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -105,9 +116,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/getCatalog.js"></script>
 <script type="text/javascript" src="js/setMailing.js"></script>
-<script type="text/javascript" src="js/toCart.js?ver=1"></script>
 </body>
 
 </html>

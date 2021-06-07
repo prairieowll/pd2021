@@ -6,6 +6,7 @@
  * @var string $database
  */
 require_once 'php/connection.php';
+require_once 'php/auth.php';
 
 $db = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка: " . mysqli_error($db));
@@ -25,7 +26,7 @@ mysqli_close($db);
     <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
     <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
     <link rel="stylesheet" type="text/css" href="css/auth.css?ver=1010">
-    <link rel="stylesheet" type="text/css" href="css/admin.css?ver=10421">
+    <link rel="stylesheet" type="text/css" href="css/admin.css?ver=1567">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
 </head>
 
@@ -43,7 +44,7 @@ mysqli_close($db);
                 <nav class="nav">
                     <a class="nav__links" href="index.html">Главная</a>
                     <a class="nav__links" href="catalog.html">Каталог</a>
-                    <a class="nav__links" href="#">Адрес и контакты</a>
+                    <a class="nav__links" href="address.html">Адрес и контакты</a>
                     <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
@@ -156,9 +157,9 @@ mysqli_close($db);
                     <div class="info">
                         <ul>
                             <li>Информация</li>
-                            <li><a class="nav__links" href="index.html#about">О нас</a></li>
-                            <li><a class="nav__links" href="">FAQ</a></li>
-                            <li><a class="nav__links" href="#">Доставка и оплата</a></li>
+                            <li><a class="nav__links" href="index.html">О нас</a></li>
+                            <li><a class="nav__links" href="delivery.html">Доставка и оплата</a></li>
+                            <li><a class="nav__links" href="admin.php">Администратору</a></li>
                         </ul>
                     </div>
                     <div class="mailing">

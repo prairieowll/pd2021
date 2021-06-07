@@ -10,8 +10,8 @@ session_start();
 
 if (isset($_POST['action']) && $_POST['action'] == 'exit') {
     $_SESSION['uid'] = [];
-} else if ($_SESSION['uid'] != []) {
-    header('Location: admin.php');
+} else if ($_SESSION['uid'] == [] && !isset($_POST['login'], $_POST['password'])) {
+    header('Location: auth.php');
 } else {
     $db = mysqli_connect($host, $user, $password, $database)
     or die("Ошибка: " . mysqli_error($db));
