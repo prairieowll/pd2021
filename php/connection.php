@@ -1,5 +1,5 @@
 <?php
-$host = 'pd2021';
-$database = 'pd2021';
-$user = 'mysql';
-$password = 'mysql';
+$host = 'std-mysql';
+$database = 'std_1467_pd2021';
+$user = 'std_1467_pd2021';
+$password = 'std_1467';

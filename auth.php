@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация - JoeStar</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1450">
     <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
     <link rel="stylesheet" type="text/css" href="css/auth.css?ver=1240">
     <link rel="icon" type="image/png"
@@ -18,7 +18,7 @@
         <div class="container">
             <div class="header__inner flexbox">
                 <div class="logo">
-                    <span>JoeStar</span>
+                    <span><a href="catalog.html">JoeStar</a></span>
                 </div>
                 <div class="menu">
                     <span></span>

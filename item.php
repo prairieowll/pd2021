@@ -29,7 +29,7 @@ mysqli_close($db);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - JoeStar</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1560">
     <link rel="stylesheet" type="text/css" href="css/item.css?ver=101">
     <link rel="icon" type="image/png" href="https://www.pngitem.com/pimgs/m/504-5048928_jojo-bizarre-adventure-symbol-hd-png-download.png">
 </head>
@@ -40,7 +40,7 @@ mysqli_close($db);
         <div class="container">
             <div class="header__inner flexbox">
                 <div class="logo">
-                    <span>JoeStar</span>
+                    <span><a href="catalog.html">JoeStar</a></span>
                 </div>
                 <div class="menu">
                     <span></span>

@@ -23,7 +23,7 @@ mysqli_close($db);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Админ-панель - JoeStar</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=1560">
     <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
     <link rel="stylesheet" type="text/css" href="css/auth.css?ver=1010">
     <link rel="stylesheet" type="text/css" href="css/admin.css?ver=1567">
@@ -37,7 +37,7 @@ mysqli_close($db);
         <div class="container">
             <div class="header__inner flexbox">
                 <div class="logo">
-                    <span>JoeStar</span>
+                    <span><a href="catalog.html">JoeStar</a></span>
                 </div>
                 <div class="menu">
                     <span></span>

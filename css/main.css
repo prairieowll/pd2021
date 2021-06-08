@@ -91,6 +91,11 @@ h6 {
    transition: all 200ms;
 }
 
+.logo a {
+   text-decoration: none;
+   color: #fafafa;
+}
+
 .header__inner.scrolled {
    align-items: center;
    padding: 15px 0;
