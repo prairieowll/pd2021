@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы - NetSpace</title>
+    <title>Авторизация - JoeStar</title>
     <link rel="stylesheet" type="text/css" href="css/main.css?ver=1000">
     <link rel="stylesheet" type="text/css" href="css/cart.css?ver=10">
     <link rel="stylesheet" type="text/css" href="css/auth.css?ver=1240">
-    <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/seo-icons-5/96/Coding-512.png">
+    <link rel="icon" type="image/png"
+          href="https://www.pngitem.com/pimgs/m/504-5048928_jojo-bizarre-adventure-symbol-hd-png-download.png">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <div class="container">
             <div class="header__inner flexbox">
                 <div class="logo">
-                    <span>ShopName</span>
+                    <span>JoeStar</span>
                 </div>
                 <div class="menu">
                     <span></span>
@@ -29,7 +30,7 @@
                     <a class="nav__links" href="cart.php"><img src="img/cart.png" alt=""></a>
                     <span class="nav__contacts">
                      <span>+7-999-888-77-66</span>
-                     <span>support@ShopName.ru</span>
+                     <span>support@joestar.ru</span>
                   </span>
                 </nav>
             </div>
@@ -70,7 +71,7 @@
                         <ul>
                             <li>Контакты</li>
                             <li>+7-999-888-77-66 <span>(10:00 - 20:00 МСК)</span></li>
-                            <li>support@netspace.ru</li>
+                            <li>support@joestar.ru</li>
                         </ul>
                     </div>
                     <div class="info">
@@ -93,7 +94,7 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    <h4>ShopName <span>&#169</span> 2020</h4>
+                    <h4>JoeStar <span>&#169</span> 2020</h4>
                 </div>
             </div>
         </div>
